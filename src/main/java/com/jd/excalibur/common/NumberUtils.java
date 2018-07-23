@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.math.BigDecimal;
 
 @Slf4j
-
 public class NumberUtils {
 
     public static boolean isNullOrZero(Long number) {
@@ -29,15 +28,10 @@ public class NumberUtils {
     }
 
     public static Long parse2Long(String str, Long defaultValue) {
-        try {
-            if (!org.apache.commons.lang.math.NumberUtils.isDigits(str)) {
-                return defaultValue;
-            }
-            return Long.parseLong(str);
-        } catch (Exception e) {
-            log.info("parse to Long error!str:{} ,defaultValue:{}", str, defaultValue, e);
+        if (!org.apache.commons.lang.math.NumberUtils.isDigits(str)) {
             return defaultValue;
         }
+        return Long.parseLong(str);
     }
 
     public static Integer parse2Integer(String str) {
@@ -45,15 +39,9 @@ public class NumberUtils {
     }
 
     public static Integer parse2Integer(String str, Integer defaultValue) {
-        try {
-            if (!org.apache.commons.lang.math.NumberUtils.isDigits(str)) {
-                return defaultValue;
-            }
-            return Integer.parseInt(str);
-        } catch (Exception e) {
-            log.info("parse to Integer error!str:{} ,defaultValue:{}", str, defaultValue, e);
+        if (!org.apache.commons.lang.math.NumberUtils.isDigits(str)) {
             return defaultValue;
         }
-
+        return Integer.parseInt(str);
     }
 }
