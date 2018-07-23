@@ -17,6 +17,7 @@
         <mysql-connector.version>5.1.39</mysql-connector.version>
         <guava.version>25.0-jre</guava.version>
         <lombok.version>1.16.14</lombok.version>
+        <redis.version>1.4.0.RELEASE</redis.version>
     </properties>
 
 
@@ -44,7 +45,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-            <version>1.4.0.RELEASE</version>
+            <version>${redis.version}</version>
         </dependency>
 
         <dependency>
