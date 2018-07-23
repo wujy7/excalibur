@@ -23,7 +23,4 @@ public class RedisService {
     public void delVal(String key){
         stringRedisTemplate.delete(key);
     }
-
-
-
 }
